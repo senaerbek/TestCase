@@ -1,4 +1,6 @@
 import {Dimensions, StyleSheet} from 'react-native';
+import {FONT_FAMILY_BOLD, FONT_FAMILY_REGULAR} from '../../themes/fonts';
+import {colors} from '../../themes/colors';
 
 const {width} = Dimensions.get('screen');
 export const styles = StyleSheet.create({
@@ -21,13 +23,13 @@ export const styles = StyleSheet.create({
   },
   welcomeText: {
     fontSize: 15,
-    fontWeight: '400',
-    color: '#000000',
+    fontFamily: FONT_FAMILY_REGULAR,
+    color: colors.grays.black,
   },
   title: {
     fontSize: 30,
-    fontWeight: '900',
-    color: '#000000',
+    fontFamily: FONT_FAMILY_BOLD,
+    color: colors.grays.black,
     marginBottom: 50,
   },
   flatListStyle: {
