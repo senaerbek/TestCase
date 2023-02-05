@@ -45,6 +45,7 @@ export function CustomTabBar({
                   <Image
                     source={require('./images/home.png')}
                     style={styles.icon}
+                    resizeMode={'contain'}
                   />
                 </View>
               </TouchableOpacity>
@@ -56,6 +57,7 @@ export function CustomTabBar({
                   <Image
                     source={require('./images/messages.png')}
                     style={styles.icon}
+                    resizeMode={'contain'}
                   />
                 </View>
               </TouchableOpacity>
@@ -67,6 +69,7 @@ export function CustomTabBar({
                   <Image
                     source={require('./images/add-photo.png')}
                     style={styles.photoIcon}
+                    resizeMode={'contain'}
                   />
                 </View>
               </TouchableOpacity>
@@ -78,6 +81,7 @@ export function CustomTabBar({
                   <Image
                     source={require('./images/profile.png')}
                     style={styles.icon}
+                    resizeMode={'contain'}
                   />
                 </View>
               </TouchableOpacity>

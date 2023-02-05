@@ -1,10 +1,11 @@
-import React, {useMemo, useState} from 'react';
+import React, {useCallback, useMemo, useState} from 'react';
 import {Image, ScrollView, Text, TouchableOpacity, View} from 'react-native';
 import {styles} from './style';
 import {Header} from '../../components/Header';
 import {MessageList} from '../../components/MessageList';
 import {MessageModel} from '../../models/messageModel';
 import {SearchInput} from '../../components/SearchInput';
+import {useNavigation} from '@react-navigation/native';
 
 const messageList: MessageModel[] = [
   {
@@ -74,7 +75,12 @@ const messageList: MessageModel[] = [
   },
 ];
 export function ConversationsScreen() {
+  const navigation = useNavigation();
   const [search, setSearch] = useState('');
+
+  const goBackPress = useCallback(() => {
+    navigation.goBack();
+  }, [navigation]);
 
   const filteredMessageList = useMemo(() => {
     return messageList.filter(message =>
@@ -85,7 +91,13 @@ export function ConversationsScreen() {
   return (
     <View style={styles.container}>
       <Header
-        left={<Text style={styles.headerLeft}>Socially</Text>}
+        left={
+          <Image
+            style={styles.leftArrow}
+            source={require('./images/arrow-left.png')}
+          />
+        }
+        leftOnPress={goBackPress}
         right={
           <Image
             source={require('./images/menu.png')}
@@ -99,7 +111,9 @@ export function ConversationsScreen() {
         style={styles.imageBackground}
         resizeMode={'contain'}
       />
-      <ScrollView showsVerticalScrollIndicator={false}>
+      <ScrollView
+        keyboardShouldPersistTaps={'always'}
+        showsVerticalScrollIndicator={false}>
         <View style={styles.body}>
           <Text style={styles.title}>Messages</Text>
           <View style={styles.searchContainer}>

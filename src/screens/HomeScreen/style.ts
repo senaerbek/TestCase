@@ -1,5 +1,6 @@
 import {StyleSheet} from 'react-native';
 import {FONT_FAMILY_BOLD} from '../../themes/fonts';
+import {colors} from '../../themes/colors';
 
 export const styles = StyleSheet.create({
   container: {
@@ -22,6 +23,7 @@ export const styles = StyleSheet.create({
   headerLeft: {
     fontFamily: FONT_FAMILY_BOLD,
     fontSize: 16,
+    color: colors.grays.black,
   },
   notifButton: {
     width: 20,
@@ -31,6 +33,7 @@ export const styles = StyleSheet.create({
     fontFamily: FONT_FAMILY_BOLD,
     fontSize: 25,
     marginVertical: 30,
+    color: colors.grays.black,
   },
   postListContainer: {
     marginHorizontal: 25,

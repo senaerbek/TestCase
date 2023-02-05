@@ -22,6 +22,7 @@ export const styles = StyleSheet.create({
     height: 20,
   },
   infoBackground: {
+    marginTop: 20,
     flex: 0.5,
     marginHorizontal: 25,
     borderRadius: 10,
@@ -71,6 +72,7 @@ export const styles = StyleSheet.create({
     height: 40,
     flex: 1,
     paddingHorizontal: 10,
+    color: colors.grays.black,
   },
   chatBubbleContainer: {
     marginTop: 16,

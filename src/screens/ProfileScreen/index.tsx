@@ -1,14 +1,15 @@
-import React from 'react';
+import React, {useCallback} from 'react';
 import {FlatList, Image, ScrollView, Text, View} from 'react-native';
 import {styles} from './style';
 import {Header} from '../../components/Header';
+import {useNavigation} from '@react-navigation/native';
 
 const profileDetails = {
   name: 'John Doe',
   nickname: 'johndoe',
-  followersCount: 100,
-  followingCount: 200,
-  postsCount: 300,
+  followersCount: '1.2M',
+  followingCount: '1.2M',
+  postsCount: '1.2M',
   posts: [
     {
       id: 1,
@@ -41,6 +42,12 @@ const profileDetails = {
   ],
 };
 export function ProfileScreen() {
+  const navigation = useNavigation();
+
+  const goBackPress = useCallback(() => {
+    navigation.goBack();
+  }, []);
+
   return (
     <View style={styles.container}>
       <Header
@@ -51,6 +58,7 @@ export function ProfileScreen() {
             resizeMode={'stretch'}
           />
         }
+        leftOnPress={goBackPress}
       />
       <Image
         source={require('./images/bg.png')}
@@ -66,20 +74,20 @@ export function ProfileScreen() {
             style={styles.image}
             resizeMode={'contain'}
           />
-          <Text style={styles.name}>John Doe</Text>
-          <Text style={styles.nick}>@johnDoe</Text>
+          <Text style={styles.name}>{profileDetails.name}</Text>
+          <Text style={styles.nick}>@{profileDetails.nickname}</Text>
           <View style={styles.userDataRow}>
             <View style={styles.userDataView}>
               <Text style={styles.infoTitle}>Posts</Text>
-              <Text style={styles.value}>1.2M</Text>
+              <Text style={styles.value}>{profileDetails.postsCount}</Text>
             </View>
             <View style={styles.userDataView}>
               <Text style={styles.infoTitle}>Followers</Text>
-              <Text style={styles.value}>1.2M</Text>
+              <Text style={styles.value}>{profileDetails.followersCount}</Text>
             </View>
             <View style={styles.userDataView}>
               <Text style={styles.infoTitle}>Follows</Text>
-              <Text style={styles.value}>1.2M</Text>
+              <Text style={styles.value}>{profileDetails.followingCount}</Text>
             </View>
           </View>
           <View style={styles.buttonView}>

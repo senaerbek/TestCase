@@ -1,6 +1,7 @@
 import React from 'react';
 import {Image, TextInput, View} from 'react-native';
 import {styles} from './style';
+import {colors} from '../../themes/colors';
 
 interface SearchInputProps {
   onChangeText: (text: string) => void;
@@ -20,6 +21,7 @@ export function SearchInput(props: SearchInputProps) {
         <TextInput
           style={styles.textInput}
           placeholder="Search for contacts"
+          placeholderTextColor={colors.grays.lightGray}
           onChangeText={onChangeText}
         />
       </View>

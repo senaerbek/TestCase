@@ -31,7 +31,6 @@ export const styles = StyleSheet.create({
     height: 20,
   },
   infoContent: {
-    marginHorizontal: 25,
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -71,8 +70,8 @@ export const styles = StyleSheet.create({
     color: colors.grays.black,
   },
   postImage: {
-    width: width / 2 - 55,
-    height: width / 2 - 55,
+    width: width / 2 - 30,
+    height: width / 2 - 30,
     marginHorizontal: 5,
     marginVertical: 5,
     borderRadius: 15,

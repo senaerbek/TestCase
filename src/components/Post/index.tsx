@@ -54,7 +54,7 @@ export function Post(props: PostProps) {
               <Image
                 source={require('./images/favorite.png')}
                 style={styles.buttonIcon}
-                resizeMode={'cover'}
+                resizeMode={'contain'}
               />
               <Text style={styles.buttonText}>{post.likesCount}</Text>
             </TouchableOpacity>
@@ -64,7 +64,7 @@ export function Post(props: PostProps) {
               <Image
                 source={require('./images/message.png')}
                 style={styles.buttonIcon}
-                resizeMode={'cover'}
+                resizeMode={'contain'}
               />
               <Text style={styles.buttonText}>{post.commentCount}</Text>
             </TouchableOpacity>
@@ -74,7 +74,7 @@ export function Post(props: PostProps) {
               <Image
                 source={require('./images/bookmark.png')}
                 style={styles.buttonIcon}
-                resizeMode={'cover'}
+                resizeMode={'contain'}
               />
               <Text style={styles.buttonText}>{post.bookmarkCount}</Text>
             </TouchableOpacity>

@@ -12,6 +12,7 @@ import {styles} from './style';
 import {KeyboardAwareView} from '../../components/KeyboardAwareView';
 import {ChatBubble} from '../../components/ChatBubble';
 import {useNavigation} from '@react-navigation/native';
+import {colors} from '../../themes/colors';
 
 const currentUser = {
   id: 1,
@@ -138,6 +139,7 @@ export function ChatScreen() {
                 <ChatBubble message={item} user={currentUser} />
               </View>
             )}
+            keyExtractor={(item, index) => index.toString()}
           />
         </View>
         <View style={styles.inputContainer}>
@@ -146,6 +148,7 @@ export function ChatScreen() {
               value={inputMessage}
               style={styles.messageInput}
               placeholder="Write a message..."
+              placeholderTextColor={colors.grays.lightGray}
               onChangeText={text => setInputMessage(text)}
               onEndEditing={sendMessage}
             />

@@ -57,9 +57,7 @@ export function StoryList() {
     return [
       {
         id: -1,
-        user: {
-          imageUri: require('./images/story.png'),
-        },
+        user: {},
       },
       ...StoryListData,
     ];
