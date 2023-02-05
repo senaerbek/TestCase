@@ -6,6 +6,7 @@ import {BottomTabBarProps} from '@react-navigation/bottom-tabs/src/types';
 import {HomeScreen} from '../screens/HomeScreen';
 import {ConversationsScreen} from '../screens/ConversationsScreen';
 import {ChatScreen} from '../screens/ChatScreen';
+import {ProfileScreen} from '../screens/ProfileScreen';
 
 export type RootStackParamList = {
   Home: undefined;
@@ -28,7 +29,7 @@ function TabComponent() {
         }}
       />
       <Tab.Screen name="AddPhoto" component={HomeScreen} />
-      <Tab.Screen name="Profile" component={HomeScreen} />
+      <Tab.Screen name="Profile" component={ProfileScreen} />
       <Tab.Screen name="Favorites" component={HomeScreen} />
     </Tab.Navigator>
   );
