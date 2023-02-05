@@ -31,6 +31,10 @@ export function CustomTabBar({
           }
         };
 
+        const navigateToConversationsScreen = () => {
+          navigation.navigate('Conversations');
+        };
+
         return (
           <View style={styles.tabBarView}>
             {route.name === 'Dashboard' ? (
@@ -46,7 +50,7 @@ export function CustomTabBar({
               </TouchableOpacity>
             ) : route.name === 'Messages' ? (
               <TouchableOpacity
-                onPress={onPress}
+                onPress={navigateToConversationsScreen}
                 style={styles.buttonContainer}>
                 <View>
                   <Image

@@ -4,6 +4,7 @@ export const colors = {
     gray: '#4e4e4e',
     lightGray: '#c4c4c4',
     white: '#ffffff',
+    whiteWithOpacity: 'rgba(255, 255, 255, 0.6)',
   },
   mainColors: {
     accentStroke: '#24a0b0',
