@@ -11,6 +11,16 @@ export const styles = StyleSheet.create({
     flex: 1,
     marginHorizontal: 25,
   },
+  leftArrowView: {
+    position: 'absolute',
+    zIndex: 1,
+    top: 30,
+    left: 20,
+  },
+  leftArrow: {
+    width: 20,
+    height: 20,
+  },
   infoBackground: {
     flex: 0.5,
     marginHorizontal: 25,

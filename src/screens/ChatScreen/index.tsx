@@ -11,6 +11,7 @@ import {
 import {styles} from './style';
 import {KeyboardAwareView} from '../../components/KeyboardAwareView';
 import {ChatBubble} from '../../components/ChatBubble';
+import {useNavigation} from '@react-navigation/native';
 
 const currentUser = {
   id: 1,
@@ -19,7 +20,8 @@ const currentUser = {
   imageUri: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/2.jpg',
 };
 
-export default function ChatScreen() {
+export function ChatScreen() {
+  const navigation = useNavigation();
   const flatListRef = useRef(null);
   const [inputMessage, setInputMessage] = useState('');
   const [messages, setMessages] = useState([
@@ -61,6 +63,10 @@ export default function ChatScreen() {
     },
   ]);
 
+  const onBackPress = useCallback(() => {
+    navigation.goBack();
+  }, [navigation]);
+
   const scrollToEnd = useCallback(() => {
     if (flatListRef.current) {
       setTimeout(
@@ -95,6 +101,12 @@ export default function ChatScreen() {
   return (
     <View style={styles.container}>
       <View style={styles.infoBackground}>
+        <TouchableOpacity onPress={onBackPress} style={styles.leftArrowView}>
+          <Image
+            style={styles.leftArrow}
+            source={require('./images/arrow-left.png')}
+          />
+        </TouchableOpacity>
         <View style={styles.infoImageView}>
           <Image
             style={styles.infoImage}

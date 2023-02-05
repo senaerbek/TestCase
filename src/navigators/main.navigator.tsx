@@ -5,7 +5,7 @@ import {CustomTabBar} from '../components/CustomTabBar';
 import {BottomTabBarProps} from '@react-navigation/bottom-tabs/src/types';
 import {HomeScreen} from '../screens/HomeScreen';
 import {ConversationsScreen} from '../screens/ConversationsScreen';
-import ChatScreen from '../screens/ChatScreen';
+import {ChatScreen} from '../screens/ChatScreen';
 
 export type RootStackParamList = {
   Home: undefined;
