@@ -8,6 +8,8 @@ const StoryListData: StoryModel[] = [
   {
     id: 1,
     user: {
+      name: 'Lukas',
+      surname: 'Petr',
       imageUri:
         'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/1.jpg',
     },
@@ -15,6 +17,8 @@ const StoryListData: StoryModel[] = [
   {
     id: 2,
     user: {
+      name: 'Lukas',
+      surname: 'Petr',
       imageUri:
         'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/2.jpg',
     },
@@ -22,6 +26,8 @@ const StoryListData: StoryModel[] = [
   {
     id: 3,
     user: {
+      name: 'Lukas',
+      surname: 'Petr',
       imageUri:
         'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/3.jpg',
     },
@@ -29,6 +35,8 @@ const StoryListData: StoryModel[] = [
   {
     id: 4,
     user: {
+      name: 'Lukas',
+      surname: 'Petr',
       imageUri:
         'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/4.jpg',
     },
@@ -36,6 +44,8 @@ const StoryListData: StoryModel[] = [
   {
     id: 5,
     user: {
+      name: 'Lukas',
+      surname: 'Petr',
       imageUri:
         'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/5.jpg',
     },

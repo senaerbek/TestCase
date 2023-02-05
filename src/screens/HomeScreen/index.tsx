@@ -1,8 +1,9 @@
 import React from 'react';
-import {Image, Text, View} from 'react-native';
+import {Image, ScrollView, Text, View} from 'react-native';
 import {Header} from '../../components/Header';
 import {styles} from './style';
 import {StoryList} from '../../components/StoryList';
+import {PostListContainer} from '../../components/PostListContainer';
 
 export function HomeScreen() {
   return (
@@ -22,10 +23,15 @@ export function HomeScreen() {
         style={styles.imageBackground}
         resizeMode={'contain'}
       />
-      <View style={styles.titleContainer}>
-        <Text style={styles.title}>Feed</Text>
-      </View>
-      <StoryList />
+      <ScrollView showsVerticalScrollIndicator={false}>
+        <View style={styles.titleContainer}>
+          <Text style={styles.title}>Feed</Text>
+        </View>
+        <StoryList />
+        <View style={styles.postListContainer}>
+          <PostListContainer />
+        </View>
+      </ScrollView>
     </View>
   );
 }

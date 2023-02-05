@@ -7,7 +7,7 @@ export const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   titleContainer: {
-    marginTop: 50,
+    marginTop: 25,
     marginHorizontal: 25,
   },
   imageBackground: {
@@ -31,5 +31,9 @@ export const styles = StyleSheet.create({
     fontFamily: FONT_FAMILY_BOLD,
     fontSize: 25,
     marginVertical: 30,
+  },
+  postListContainer: {
+    marginHorizontal: 25,
+    marginTop: 30,
   },
 });
