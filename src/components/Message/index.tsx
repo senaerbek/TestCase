@@ -12,7 +12,8 @@ export function Message(props: MessageProps) {
   const {message} = props;
 
   const navigateToMessageDetail = useCallback(() => {
-    navigation.navigate('MessageDetail', {message});
+    // @ts-ignore
+    navigation.navigate('Chat', {message});
   }, [message, navigation]);
 
   return (

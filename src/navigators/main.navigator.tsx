@@ -5,10 +5,12 @@ import {CustomTabBar} from '../components/CustomTabBar';
 import {BottomTabBarProps} from '@react-navigation/bottom-tabs/src/types';
 import {HomeScreen} from '../screens/HomeScreen';
 import {ConversationsScreen} from '../screens/ConversationsScreen';
+import ChatScreen from '../screens/ChatScreen';
 
 export type RootStackParamList = {
   Home: undefined;
   Conversations: undefined;
+  Chat: undefined;
 };
 
 const MainStack = createStackNavigator<RootStackParamList>();
@@ -37,6 +39,7 @@ export const MainNavigator = memo(function ApplicationNavigator() {
     <MainStack.Navigator screenOptions={{headerShown: false}}>
       <MainStack.Screen name="Home" component={TabComponent} />
       <MainStack.Screen name="Conversations" component={ConversationsScreen} />
+      <MainStack.Screen name="Chat" component={ChatScreen} />
     </MainStack.Navigator>
   );
 });
