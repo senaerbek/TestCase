@@ -46,7 +46,7 @@ export function ProfileScreen() {
 
   const goBackPress = useCallback(() => {
     navigation.goBack();
-  }, []);
+  }, [navigation]);
 
   return (
     <View style={styles.container}>
