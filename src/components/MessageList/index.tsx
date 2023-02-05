@@ -18,6 +18,7 @@ export function MessageList(props: MessageListProps) {
           <Message message={item} />
         </View>
       )}
+      keyExtractor={item => item.id.toString()}
     />
   );
 }
